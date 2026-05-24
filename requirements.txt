@@ -1,0 +1,4 @@
+gymnasium>=1.0.0
+scikit-fuzzy>=0.5.0
+numpy>=1.21.0
+pygame>=2.5.0
