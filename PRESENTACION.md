@@ -196,21 +196,25 @@ Muestra cada paso en consola y la ventana **pygame** del entorno. Al terminar im
 
 ```bash
 python blackjack_fis.py --eval 5000
-python blackjack_fis.py --eval 50 --render
 ```
 
-Con `--render` en `--eval` se abre pygame en los primeros 10 episodios (ajusta con `--render-max`); al final salen las mismas estadísticas difusas.
+**Resultados de la corrida real (5000 episodios):**
 
-**Resultados de referencia (FIS difuso):**
+```text
+=== Estadisticas del juego ===
+  episodios: 5000
+  recompensa_media: -0.0482
+  victorias: 2134 (42.7%)
+  derrotas: 2375 (47.5%)
+  empates: 491 (9.8%)
+  pasos_promedio_por_episodio: 1.57
 
-| Métrica | Valor típico |
-|---------|----------------|
-| Recompensa media | ≈ −0.05 a −0.07 |
-| Tasa de victoria | ≈ 42–43 % |
-| Empates | ≈ 9 % |
-
-*(Pegar aquí la salida de tu corrida real.)*
-
+=== Estadisticas del FIS (difuso) ===
+  decisiones HIT (pedir): 3757
+  decisiones STICK (plantarse): 4078
+  % HIT: 48.0%
+  % STICK: 52.0%
+```
 ---
 
 ## 10. Conclusión

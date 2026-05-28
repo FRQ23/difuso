@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Blackjack Difuso - Presentación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/monokai.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap');
+        
+        @font-face {
+            font-family: 'Nerdropol';
+            src: url('imagenes/nerdropol.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --cyber-yellow: #fcee0a;
+            --cyber-blue: #00f0ff;
+            --cyber-pink: #ff003c;
+            --cyber-dark: #050505;
+            --cyber-grid: rgba(0, 240, 255, 0.15);
+        }
+
+        body, .reveal {
+            background-color: var(--cyber-dark) !important;
+            background-image: 
+                linear-gradient(var(--cyber-grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--cyber-grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+            font-family: 'Nerdropol', sans-serif !important;
+        }
+
+        .reveal {
+            font-size: 24px; /* Aún más reducido para evitar recortes verticales */
+        }
+
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: 'Orbitron', sans-serif !important;
+            color: var(--cyber-yellow) !important;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0px var(--cyber-pink), -2px -2px 0px var(--cyber-blue);
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
+
+        .reveal h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .reveal p, .reveal li, .reveal td, .reveal th {
+            color: #e0e0e0;
+            text-shadow: 1px 1px 3px #000;
+            line-height: 1.4;
+            font-weight: bold !important;
+            letter-spacing: 0.5px;
+        }
+
+        .reveal .progress span {
+            background-color: var(--cyber-blue) !important;
+            box-shadow: 0 0 10px var(--cyber-blue);
+        }
+
+        .reveal .controls {
+            color: var(--cyber-pink) !important;
+        }
+
+        .cyber-box {
+            border: 2px solid var(--cyber-blue);
+            background: rgba(10, 10, 15, 0.85);
+            padding: 15px;
+            box-shadow: 0 0 20px var(--cyber-blue) inset, 0 0 10px var(--cyber-blue);
+            border-radius: 2px;
+            position: relative;
+            text-align: left;
+            margin: 0 auto;
+            width: 85%;
+        }
+
+        .cyber-box::before {
+            content: 'SYS.DAT';
+            position: absolute;
+            top: -12px; left: 10px;
+            background: var(--cyber-dark);
+            color: var(--cyber-blue);
+            padding: 0 10px;
+            font-size: 0.5em;
+            font-weight: bold;
+            border: 1px solid var(--cyber-blue);
+        }
+
+        .highlight-text {
+            color: var(--cyber-yellow);
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--cyber-yellow);
+        }
+
+        .alert-text {
+            color: var(--cyber-pink);
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--cyber-pink);
+        }
+
+        pre code {
+            border: 1px solid var(--cyber-pink);
+            box-shadow: 0 0 10px var(--cyber-pink);
+            background: #000 !important;
+            font-family: 'Nerdropol', monospace !important;
+            font-weight: bold !important;
+            color: #00f0ff !important;
+        }
+        
+        table.cyber-table {
+            font-size: 0.7em;
+            margin: auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.cyber-table th {
+            color: var(--cyber-dark) !important;
+            background-color: var(--cyber-blue);
+            text-shadow: none;
+            padding: 8px;
+            border: 1px solid var(--cyber-blue);
+        }
+        table.cyber-table td {
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            padding: 8px;
+        }
+        
+        .small-text {
+            font-size: 0.7em;
+            color: #ccc !important;
+            font-weight: bold !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Portada -->
+            <section>
+                <img src="imagenes/1859066.png" alt="UABC Escudo" style="height: 100px; margin-bottom: 10px; filter: drop-shadow(0 0 15px var(--cyber-yellow));">
+                <h1 style="font-size: 1.5em; margin-bottom: 0;">Blackjack Difuso</h1>
+                <h3 style="color: var(--cyber-blue) !important; text-shadow: none; font-size: 1.1em; margin-bottom: 10px;">Gymnasium | Lógica Difusa</h3>
+                <div class="cyber-box" style="margin-top: 10px; font-size: 0.6em; width: 70%; padding: 15px;">
+                    <p>> ALUMNO: <span class="highlight-text">Fernando Rosales</span></p>
+                    <p>> MATERIA: <span class="highlight-text">Cómputo Suave</span></p>
+                    <p>> DOCENTE: <span class="highlight-text">Gustavo Omar Zamarrón de la Garza</span></p>
+                    <p>> FACULTAD: <span class="highlight-text">FCQI</span></p>
+                </div>
+            </section>
+
+            <!-- Entorno -->
+            <section>
+                <h2>1. Entorno Elegido</h2>
+                <div class="cyber-box">
+                    <p>> TARGET: <span class="highlight-text">Blackjack-v1</span> (Gymnasium / Toy Text).</p>
+                    <p><strong>Razón de la elección:</strong></p>
+                    <ul>
+                        <li>Escenario perfecto para la toma de decisiones basada en Lógica Difusa.</li>
+                        <li>Las observaciones se modelan de forma natural con lenguaje humano ("crupier fuerte", "suma baja").</li>
+                        <li>No requiere física compleja, permitiendo enfocarse puramente en la inferencia difusa.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Dinámicas (Divididas para que no se corte) - Parte 1 -->
+            <section>
+                <h2>2. Dinámicas (El Estado)</h2>
+                <div class="cyber-box">
+                    <p>El entorno nos entrega una tupla de <span class="highlight-text">3 observaciones:</span></p>
+                    <ul style="margin-bottom: 20px;">
+                        <li><strong>Suma del Jugador:</strong> [4 a 21]. Puntos actuales en mano.</li>
+                        <li><strong>Carta del Crupier:</strong> [1 a 10]. La carta visible de la casa.</li>
+                        <li><strong>As Utilizable:</strong> [0 o 1]. Determina si tenemos una "mano blanda".</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Dinámicas Parte 2 -->
+            <section>
+                <h2>3. Objetivo y Acciones</h2>
+                <div class="cyber-box">
+                    <p>> MISSION: <strong>Simular el juego de Veintiuno.</strong></p>
+                    <p class="small-text">El jugador debe acercarse a 21 sin pasarse, para ganarle a la casa.</p>
+                    <br>
+                    <p><strong>Acciones Disponibles:</strong></p>
+                    <ul>
+                        <li>[0] = <span class="alert-text">STICK</span> (Plantarse y ceder turno)</li>
+                        <li>[1] = <span class="highlight-text">HIT</span> (Pedir otra carta)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Entradas 1 -->
+            <section>
+                <h2>4. Entradas Difusas (1/2)</h2>
+                <div class="cyber-box">
+                    <h4 style="color:var(--cyber-blue)!important; text-shadow:none; font-size:1.1em;">>_ SUMA DEL JUGADOR</h4>
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <img src="imagenes/img_1.png" style="width: 45%; border: 2px solid var(--cyber-blue); filter: hue-rotate(180deg) invert(1) grayscale(0.5);">
+                        <table class="cyber-table" style="width: 50%;">
+                            <tr><th>Término</th><th>Función</th><th>Justificación</th></tr>
+                            <tr><td>hasta_11</td><td>Triangular</td><td>Mano baja, pedir no tiene riesgo.</td></tr>
+                            <tr><td>es_12</td><td>Triangular</td><td>Punto crítico. Decisión difícil.</td></tr>
+                            <tr><td>de_13_a_16</td><td>Triangular</td><td>Zona roja de alto riesgo.</td></tr>
+                            <tr><td>desde_17</td><td>Triangular</td><td>Mano fuerte, preferible plantarse.</td></tr>
+                        </table>
+                    </div>
+                    <p class="small-text" style="margin-top:15px;">*Se usan funciones triangulares/trapezoidales para asegurar un traslape continuo tipo Mamdani.</p>
+                </div>
+            </section>
+
+            <!-- Entradas 2 -->
+            <section>
+                <h2>5. Entradas Difusas (2/3)</h2>
+                <div class="cyber-box">
+                    <h4 style="color:var(--cyber-blue)!important; text-shadow:none; font-size:1.1em;">>_ CARTA DEL CRUPIER</h4>
+                    <div style="display: flex; gap: 20px; align-items: center; justify-content: space-between;">
+                        <img src="imagenes/img_2.png" style="width: 45%; border: 2px solid var(--cyber-blue); filter: hue-rotate(180deg) invert(1) grayscale(0.5);">
+                        <p class="small-text" style="width: 50%;">Términos como <code>d_4_5_6</code> o <code>d_9_10_A</code> segmentan la probabilidad de que la casa se pase de 21 o consiga una mano invencible.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Entradas 3 -->
+            <section>
+                <h2>6. Entradas Difusas (3/3)</h2>
+                <div class="cyber-box">
+                    <h4 style="color:var(--cyber-blue)!important; text-shadow:none; font-size:1.1em;">>_ AS UTILIZABLE</h4>
+                    <div style="display: flex; gap: 20px; align-items: center; justify-content: space-between;">
+                        <img src="imagenes/img_3.png" style="width: 45%; border: 2px solid var(--cyber-blue); filter: hue-rotate(180deg) invert(1) grayscale(0.5);">
+                        <p class="small-text" style="width: 50%;">Términos <code>no</code> y <code>si</code> (Triangulares puntuales). Variable discreta binaria que cambia completamente el estilo de juego.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salida y Defuzzificador -->
+            <section>
+                <h2>7. Salida y Defuzzificador</h2>
+                <div class="cyber-box">
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <div style="width: 50%;">
+                            <h4 style="color:var(--cyber-blue)!important; text-shadow:none; font-size:1.1em;">>_ INCLINACIÓN A PEDIR [0.0 - 1.0]</h4>
+                            <ul>
+                                <li><code>plantarse</code> [0 a 0.35]</li>
+                                <li><code>pedir</code> [0.65 a 1]</li>
+                            </ul>
+                            
+                            <h4 style="color:var(--cyber-pink)!important; text-shadow:none; font-size:1.1em; margin-top:20px;">> DEFUZZIFICADOR: CENTROIDE</h4>
+                            <p class="small-text"><strong>Razón:</strong> El centro de gravedad pondera todas las reglas disparadas en un único valor proporcional. Posteriormente, el sistema aplica un umbral estricto en 0.5 para elegir la acción discreta (0 o 1) del entorno.</p>
+                        </div>
+                        <img src="imagenes/img_4.png" style="width: 45%; border: 2px solid var(--cyber-pink); filter: hue-rotate(180deg) invert(1) grayscale(0.5);">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reglas -->
+            <section>
+                <h2>8. Diseño de Reglas</h2>
+                <div class="cyber-box">
+                    <p class="small-text">16 Reglas basadas matemáticamente en la Estrategia Básica de casino.</p>
+                    <table class="cyber-table">
+                        <tr><th>SI...</th><th>Y Crupier...</th><th>ENTONCES</th><th>Razón</th></tr>
+                        <tr><td>Suma es 12</td><td>tiene 4, 5 o 6</td><td><span class="alert-text">Plantarse</span></td><td>La casa tiene altas chances de bust.</td></tr>
+                        <tr><td>Suma 13-16</td><td>tiene 7 a 10</td><td><span class="highlight-text">Pedir</span></td><td>Debemos forzar para no perder contra carta alta.</td></tr>
+                        <tr><td>Suma (17+)</td><td>(Cualquiera)</td><td><span class="alert-text">Plantarse</span></td><td>Riesgo inaceptable de pasarse.</td></tr>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Prueba de Inferencia -->
+            <section>
+                <h2>9. Prueba de Inferencia</h2>
+                <div class="cyber-box">
+                    <p class="small-text">> EXECUTING: Jugador tiene 12, Crupier muestra un 5.</p>
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <pre style="width: 50%;"><code class="python">
+obs = Observacion(suma=12, crupier=5, as_util=0)
+accion, centroide, _ = inferir_accion(sim, obs)
+
+# >>> Centroide calculado = 0.1167
+# >>> 0.1167 < 0.5  --> STICK
+                        </code></pre>
+                        <img src="imagenes/img_5.png" style="width: 45%; border: 2px solid var(--cyber-yellow); filter: hue-rotate(180deg) invert(1) grayscale(0.5);">
+                    </div>
+                    <p class="small-text" style="margin-top: 10px;">Al activarse la regla <strong>HD3</strong>, la inclinación a pedir se desploma hacia el extremo izquierdo, demostrando la eficacia del crupier débil.</p>
+                </div>
+            </section>
+
+            <!-- Corrida en Vivo -->
+            <section>
+                <h2>10. Corrida en Vivo</h2>
+                <div class="cyber-box" style="padding: 15px;">
+                    <pre style="margin: 0; width: 100%;"><code class="bash" style="font-size: 0.7em; line-height: 1.2;">
+--- Episodio 2 ---
+paso 0: suma=5, crupier=5, as_util=0 | centroide=0.883 -> HIT
+paso 1: suma=16, crupier=5, as_util=1 | centroide=0.883 -> HIT
+paso 2: suma=12, crupier=5, as_util=0 | centroide=0.117 -> STICK
+resultado: GANO (recompensa=1.0)
+
+--- Episodio 3 ---
+paso 0: suma=12, crupier=As, as_util=0 | centroide=0.883 -> HIT
+paso 1: suma=17, crupier=As, as_util=0 | centroide=0.117 -> STICK
+resultado: EMPATE (recompensa=0.0)
+                    </code></pre>
+                </div>
+            </section>
+
+            <!-- Conclusión -->
+            <section>
+                <h2>11. Conclusión</h2>
+                <div class="cyber-box">
+                    <p>>_ EVALUACIÓN: <span class="highlight-text">5000 EPISODIOS</span></p>
+                    <ul style="font-size: 0.9em; margin-bottom: 20px;">
+                        <li><strong>Victorias: <span class="highlight-text">42.7%</span></strong></li>
+                        <li>Derrotas: <span class="alert-text">47.5%</span> | Empates: 9.8%</li>
+                    </ul>
+                    <p class="small-text">
+                    <strong>Reflexión Final:</strong><br>
+                    Alcanzar un 42.7% de victorias demuestra que el FIS capturó matemáticamente la Estrategia Básica (cuyo límite teórico es idéntico). El desafío principal fue adaptar un universo discreto (cartas enteras) a conjuntos difusos sin dejar "huecos" lógicos, obteniendo como resultado un controlador robusto y eficiente.
+                    </p>
+                </div>
+            </section>
+            
+            <section>
+                <h1>GRACIAS POR SU ATENCIÓN</h1>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            plugins: [ RevealHighlight ]
+        });
+    </script>
+</body>
+</html>
